@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.ExecutionException;
 
+// https://docs.oracle.com/javase/tutorial/uiswing/concurrency/worker.html
+
 public class FractalRetriever extends SwingWorker<BufferedImage, Void> {
 
     private Fractal fractal;

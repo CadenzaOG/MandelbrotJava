@@ -8,6 +8,11 @@ public class ComplexNumber {
         this.imaginary = 0.0;
     }
 
+    public ComplexNumber(double real, double imaginary) {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+
     public void set(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
@@ -20,13 +25,6 @@ public class ComplexNumber {
     public void setImaginary(double imaginary) {
         this.imaginary = imaginary;
     }
-
-    public ComplexNumber(double real, double imaginary) {
-        this.real = real;
-        this.imaginary = imaginary;
-    }
-
-
 
     public ComplexNumber add(ComplexNumber n) {
         double sumRe;

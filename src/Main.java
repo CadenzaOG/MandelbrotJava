@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 
+// https://www.geeksforgeeks.org/java/introduction-to-java-swing/
+// https://docs.oracle.com/javase/tutorial/uiswing/concurrency/worker.html
 
 public class Main {
 

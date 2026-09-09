@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 public class DrawPanel extends JPanel {
 
-    public BufferedImage image;
+    private BufferedImage image;
 
     public DrawPanel(int width, int height) {
         setPreferredSize(new Dimension(width, height));
