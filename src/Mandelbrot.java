@@ -1,10 +1,8 @@
-import org.w3c.dom.css.RGBColor;
+
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.lang.classfile.CompoundElement;
 
-import static java.awt.Color.*;
 
 //https://docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html
 
@@ -97,7 +95,7 @@ public class Mandelbrot implements Fractal {
                 ComplexNumber z = new ComplexNumber();
                 ComplexNumber c = new ComplexNumber(real,imaginary);
 
-                // To add: additional maths for quickly checking if point in main cardiod or bulb
+                // To add later: additional maths for quickly checking if point in main cardiod or bulb
                 boolean cardioid = false;
                 boolean bulb = false;
 
@@ -117,7 +115,8 @@ public class Mandelbrot implements Fractal {
                     iterations++;
                 }
 
-
+                // map the number of iterations to array of colours stored above.
+                // Note for future: Explore different colouring methods, perhaps add as an option.
                 int rgb = colors[(int) map((double) iterations/maxIterations,0,1,0,colors.length - 1)];
 
                 if (iterations == maxIterations) {

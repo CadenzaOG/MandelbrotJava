@@ -1,10 +1,5 @@
 import javax.swing.*;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.ExecutionException;
-
 
 
 
