@@ -54,7 +54,7 @@ public class Mandelbrot implements Fractal {
         this.centerX = centerX;
         this.centerY = centerY;
 
-        this.maxIterations = 100;
+        this.maxIterations = 200;
         this.cPlane = 2;
         this.min = new ComplexNumber(centerX-cPlane/zoom,centerY-cPlane/zoom);
         this.max = new ComplexNumber(centerX+cPlane/zoom,centerY+cPlane/zoom);
