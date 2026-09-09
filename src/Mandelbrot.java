@@ -96,6 +96,7 @@ public class Mandelbrot implements Fractal {
                 ComplexNumber c = new ComplexNumber(real,imaginary);
 
                 // To add later: additional maths for quickly checking if point in main cardiod or bulb
+                // https://loiseaujc.github.io/Scientific_Computing_on_a_Laptop/Maths/Mandelbrot/definition.html
                 boolean cardioid = false;
                 boolean bulb = false;
 
