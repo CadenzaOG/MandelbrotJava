@@ -2,11 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 
 
+
 // https://www.geeksforgeeks.org/java/introduction-to-java-swing/
 // https://docs.oracle.com/javase/tutorial/uiswing/concurrency/worker.html
 
 public class Main {
-
 
     private static final int IMAGE_WIDTH = 600;
     private static final int IMAGE_HEIGHT = 600;
@@ -22,10 +22,10 @@ public class Main {
     private final JSlider ySlider = new JSlider(-200000, 200000, 0);
     private final JSpinner zoomInput = new JSpinner(
             new SpinnerNumberModel(
-                    1.0,
-                    1.0,
-                    1000000.00,
-                    0.5
+                    0,
+                    0,
+                    13.81551056,
+                    0.05
             )
     );
 
@@ -91,7 +91,9 @@ public class Main {
     private void renderImage() {
         double centerX = xSlider.getValue() / 100000.0;
         double centerY = ySlider.getValue() / 100000.0;
-        double zoom = ((Number) zoomInput.getValue()).doubleValue();
+
+        // Zooming linearly felt slow, raising e to the power of the zoom input makes zoom feel more natural.
+        double zoom = Math.pow(2.71828, (Double) zoomInput.getValue());
 
         if (fractalRetriever != null && !fractalRetriever.isDone()) {
             fractalRetriever.cancel(true);
