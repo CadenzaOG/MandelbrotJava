@@ -19,59 +19,59 @@ public class Mandelbrot implements Fractal {
     private double centerY;
     private ComplexNumber min;
     private ComplexNumber max;
-//    private int[] colors = new int[]{
-//            0xFFFFFE,
-//            0xFFFEF4,
-//            0xFCFFEA,
-//            0xF2FFDF,
-//            0xDEFAD1,
-//            0xBFEDBD,
-//            0xAAE0B6,
-//            0x98D4B5,
-//            0x87C7B8,
-//            0x77B8BA,
-//            0x6898AD,
-//            0x5A78A1,
-//            0x4D5894,
-//            0x494187,
-//            0x50367A,
-//            0x572C6E,
-//            0x5C2361,
-//            0x541B49,
-//            0x47142F,
-//            0x3B0E1A,
-//            0x2E0909,
-//            0x210D05,
-//            0x140C02,
-//            0x080601
-//    };
-
     private int[] colors = new int[]{
-            0x000000,
-            0x010804,
-            0x041511,
-            0x06201E,
-            0x0A2A2C,
-            0x0F343B,
-            0x143D4B,
-            0x1A465E,
-            0x224E74,
-            0x30538E,
-            0x4656A4,
-            0x605AB2,
-            0x7A5EB8,
-            0x9363BB,
-            0xAA69B9,
-            0xBF71B4,
-            0xCF7CAE,
-            0xDA8AA8,
-            0xE19AA7,
-            0xE6AAAA,
-            0xE9BAB1,
-            0xEDC9BA,
-            0xF1D7C7,
-            0xF5E5D6
+            0xFFFFFE,
+            0xFFFEF4,
+            0xFCFFEA,
+            0xF2FFDF,
+            0xDEFAD1,
+            0xBFEDBD,
+            0xAAE0B6,
+            0x98D4B5,
+            0x87C7B8,
+            0x77B8BA,
+            0x6898AD,
+            0x5A78A1,
+            0x4D5894,
+            0x494187,
+            0x50367A,
+            0x572C6E,
+            0x5C2361,
+            0x541B49,
+            0x47142F,
+            0x3B0E1A,
+            0x2E0909,
+            0x210D05,
+            0x140C02,
+            0x080601
     };
+
+//    private int[] colors = new int[]{
+//            0x000000,
+//            0x010804,
+//            0x041511,
+//            0x06201E,
+//            0x0A2A2C,
+//            0x0F343B,
+//            0x143D4B,
+//            0x1A465E,
+//            0x224E74,
+//            0x30538E,
+//            0x4656A4,
+//            0x605AB2,
+//            0x7A5EB8,
+//            0x9363BB,
+//            0xAA69B9,
+//            0xBF71B4,
+//            0xCF7CAE,
+//            0xDA8AA8,
+//            0xE19AA7,
+//            0xE6AAAA,
+//            0xE9BAB1,
+//            0xEDC9BA,
+//            0xF1D7C7,
+//            0xF5E5D6
+//    };
 
     private boolean checkCardioidOrBulb(ComplexNumber c) {
 
@@ -91,25 +91,6 @@ public class Mandelbrot implements Fractal {
         }
 
         return a <= b;
-//        Translated from LUA COde below.
-
-//        --check if point in main cardiod
-//        local cb2=cb*cb
-//        local casubq=ca-0.25
-//        local q=casubq*casubq+cb2
-//        local a=q*q+q*casubq
-//        local b=0.25*cb2
-//
-//                --check if point in period 2 bulb
-//        local p2=ca*ca+2*ca+1+cb2
-//
-//        if p2 <= 0.0625 then
-//                n=max_iterations
-//        end
-//
-//        if a<=b then
-//                n=max_iterations
-//        end
     }
 
 

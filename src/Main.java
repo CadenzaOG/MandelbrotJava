@@ -11,7 +11,6 @@ public class Main {
     private static final int IMAGE_WIDTH = 1000;
     private static final int IMAGE_HEIGHT = 1000;
 
-
     private final JFrame window = new JFrame("Mandelbrot");
 
     private final DrawPanel drawPanel = new DrawPanel(IMAGE_WIDTH, IMAGE_HEIGHT);
