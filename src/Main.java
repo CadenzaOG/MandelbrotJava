@@ -8,8 +8,8 @@ import java.awt.*;
 
 public class Main {
 
-    private static final int IMAGE_WIDTH = 600;
-    private static final int IMAGE_HEIGHT = 600;
+    private static final int IMAGE_WIDTH = 1000;
+    private static final int IMAGE_HEIGHT = 1000;
 
 
     private final JFrame window = new JFrame("Mandelbrot");
@@ -20,11 +20,29 @@ public class Main {
 
     private final JSlider xSlider = new JSlider(-150000, 150000, -50000);
     private final JSlider ySlider = new JSlider(-150000, 150000, 0);
+    private final JSpinner xInput = new JSpinner(
+            new SpinnerNumberModel(
+                    -0.5,
+                    -2,
+                    2,
+                    0.0001
+            )
+    );
+
+    private final JSpinner yInput = new JSpinner(
+            new SpinnerNumberModel(
+                    -0.5,
+                    -2,
+                    2,
+                    0.0001
+            )
+    );
+
     private final JSpinner zoomInput = new JSpinner(
             new SpinnerNumberModel(
                     0,
                     0,
-                    13.81551056,
+                    30,
                     0.05
             )
     );
@@ -35,7 +53,7 @@ public class Main {
 
 
 
-        JPanel controls = new JPanel(new GridLayout(3,3,8,8));
+        JPanel controls = new JPanel(new GridLayout(3,2,8,8));
 
         JLabel xValue = new JLabel(String.valueOf(xSlider.getValue() / 100000.0));
         JLabel yValue = new JLabel(String.valueOf(ySlider.getValue() / 100000.0));
@@ -45,7 +63,9 @@ public class Main {
         controls.add(new JLabel("X"));
         controls.add(xSlider);
         controls.add(xValue);
+        //        controls.add(xInput);
         controls.add(new JLabel("Y"));
+//        controls.add(yInput);
         controls.add(ySlider);
         controls.add(yValue);
         controls.add(new JLabel("Zoom"));
