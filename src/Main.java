@@ -18,8 +18,8 @@ public class Main {
 
     // https://docs.oracle.com/javase/tutorial/uiswing/components/slider.html
 
-    private final JSlider xSlider = new JSlider(-75000, 75000, -50000);
-    private final JSlider ySlider = new JSlider(-75000, 75000, 0);
+    private final JSlider xSlider = new JSlider(-150000, 150000, -50000);
+    private final JSlider ySlider = new JSlider(-150000, 150000, 0);
     private final JSpinner zoomInput = new JSpinner(
             new SpinnerNumberModel(
                     0,
